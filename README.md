@@ -1,24 +1,9 @@
-# README
+# Wuthering Waves Wiki
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the wiki for the future game Wuthering Waves
 
-Things you may want to cover:
+## How the project work
 
-* Ruby version
+This Ruby on rails project will simply render some file located in the folder `./pages/` of the project
+for the moment everyone can create pages, but we will add a admin to allow creators to create page and if the guest is not connected as admin, it will be read only
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

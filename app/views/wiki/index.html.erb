@@ -1,0 +1,22 @@
+<h1>Wuthering Wave Wiki</h1>
+
+<table>
+  <% @all_pages.each do |page_filename| %>
+    <% page_name = page_filename.sub("./pages/", "").sub("_page", "") %>
+      <tr class="card bg-primary-content p-5 my-5">
+        <td>
+          <div class="flex justify-center">
+            <div>
+              <a href="<%= "/wiki/" + page_name %>" class="underline underline-offset-4">
+                <%= page_name.sub("_", " ") %>
+              </a>
+            </div>
+          </div>
+        </td>
+      </tr>
+  <% end %>
+</table>
+
+
+
+

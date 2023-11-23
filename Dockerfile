@@ -19,7 +19,10 @@ FROM base as build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libvips pkg-config
+    apt-get install --no-install-recommends -y build-essential git libvips pkg-config npm
+
+# Install npm dependecies
+RUN npm install -D tailwindcss@latest @tailwindcss/forms @tailwindcss/aspect-ratio @tailwindcss/typography @tailwindcss/container-queries daisyui@latest
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
@@ -56,7 +59,7 @@ COPY --from=build /rails /rails
 
 # Run and own only the runtime files as a non-root user for security
 RUN useradd rails --create-home --shell /bin/bash && \
-    chown -R rails:rails db log storage tmp
+    chown -R rails:rails db log storage tmp pages
 USER rails:rails
 
 # Entrypoint prepares the database.

@@ -11,6 +11,7 @@
     <%= javascript_importmap_tags %>
 
 <!--    we have to change the cdn by the default installation-->
+<!--    Man, I'm so bad to configure this css and js thing, that's not my thing-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -23,7 +24,11 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </label>
         </div>
-        <div class="flex-1 px-2 mx-2"><a href="/wiki">Wuthering Wave Wiki</a></div>
+        <div class="flex-1 px-2 mx-2">
+          <a href="/wiki">
+            <%= image_tag "Wuthering-Waves-logo.png", class: ['h-16'] %>
+          </a>
+        </div>
         <div class="flex-none hidden lg:block">
           <ul class="menu menu-horizontal">
             <li><a href="/wiki/new">New page</a></li>
@@ -43,7 +48,7 @@
   <body class="min-h-screen">
     <div class="bg-fixed bg-cover min-h-screen" style="background-image: url('<%= image_path("Wuthering-Waves-Background.jpg") %>')">
       <div class="flex justify-center min-h-screen">
-        <div class="bg-primary-content w-2/3 m-10 rounded-lg">
+        <div class="bg-primary-content w-2/3 mt-10 mb-36 rounded-lg">
           <div class="flex justify-center p-10">
             <div class="prose">
               <%= yield %>

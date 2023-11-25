@@ -40,10 +40,16 @@
       </ul>
     </div>
   </div>
-  <body class="w-screen">
-    <div class="flex justify-center">
-      <div class="prose">
-        <%= yield %>
+  <body >
+    <div class="bg-fixed bg-cover w-full" style="background-image: url('<%= image_path("Wuthering-Waves-Background.jpg") %>')">
+      <div class="flex justify-center">
+        <div class="bg-primary-content w-2/3 m-10 rounded-lg">
+          <div class="flex justify-center p-10 h-full">
+            <div class="prose">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

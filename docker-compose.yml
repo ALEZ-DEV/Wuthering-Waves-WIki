@@ -5,4 +5,6 @@ services:
     image: 'wuwa-wiki'
     network_mode: host
     environment:
-      - RAILS_MASTER_KEY=b925782a1c3cb3f1049f2365d8513b81
+      - RAILS_MASTER_KEY=<your_generated_rails_master_key>
+    volumes:
+      - <path_to_the_project>/pages:/rails/pages

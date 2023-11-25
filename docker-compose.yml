@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  Wuthering-Waves-Wiki:
+    build: .
+    image: 'wuwa-wiki'
+    network_mode: host
+    environment:
+      - RAILS_MASTER_KEY=b925782a1c3cb3f1049f2365d8513b81

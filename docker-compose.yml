@@ -2,9 +2,10 @@ version: '3.8'
 services:
   Wuthering-Waves-Wiki:
     build: .
+    user: root
     image: 'wuwa-wiki'
     network_mode: host
     environment:
       - RAILS_MASTER_KEY=<your_generated_rails_master_key>
     volumes:
-      - <path_to_the_project>/pages:/rails/pages
+      - <path_to_the_project>/pages:/rails/pages:rw
